@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Car Show | Resourceful</title>
+            <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+      <header>
+        <img id="header_image" src="racing.png" alt="classic">
+        <h1>Car Show Registration</h1>
+      </header>
+        <div class="row">
+            <div class="column">
+                <div class="registerform">
+                    <h2>Please Fill out to Register</h2>
+                    Name of Owner: <input type="text" id="owner_name">
+                    Year of Vehicle: <input type="text" id="year">
+                    Make of Vehicle: <input type="text" id="make">
+                    Model of Vehicle: <input type="text" id="model">
+                    Color of Vehicle: <input type="text" id="color">
+                    License Plate of Vehicle: <input type="text" id="platenumber">
+                    <button id="button" name="button" >Register</button>
+                </div>
+            </div>
+            <div class="column">
+                 <div class="updateform">
+                    <h2>Update Registration</h2>
+                    Name of Owner: <input type="text" id="updateowner_name">
+                    Year of Vehicle: <input type="text" id="updateyear">
+                    Make of Vehicle: <input type="text" id="updatemake">
+                    Model of Vehicle: <input type="text" id="updatemodel">
+                    Color of Vehicle: <input type="text" id="updatecolor">
+                    License Plate of Vehicle: <input type="text" id="updateplatenumber">
+                    <button id="updatebutton" name="button" >Update</button>
+                    <button id="addbutton" name="button" >Add Registration</button>
+                </div>
+            </div>
+            <div class="column">
+                <h2 class="list">Currently Registered</h2>
+                <div id="myContainer">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src= "resourceful.js"></script>
+</html>
