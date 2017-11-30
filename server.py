@@ -286,7 +286,7 @@ class MyHandler(BaseHTTPRequestHandler):
 
 def main():
     db = CarsDB()
-    db.createCarsTable()
+    db.createCarTable()
     db = None
 
     port = 8080
