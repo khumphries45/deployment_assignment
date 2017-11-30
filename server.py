@@ -1,9 +1,8 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from urllib.parse import parse_qs
+from urllib.parse import urlparse, parse_qs
 import json
 from cars_db import CarsDB
 import sys
-import sqlite3
 from http import cookies
 from session_store_example import SessionStore
 gSessionStore = SessionStore()
@@ -286,10 +285,19 @@ class MyHandler(BaseHTTPRequestHandler):
         self.wfile.write(bytes("Unprocessable", "utf-8"))
 
 def main():
-    listen = ("0.0.0.0", 8080)
+    db = CarsDB()
+    db.createCarsTable()
+    db = None
+
+    port = 8080
+    if len(sys.argv) > 1:
+        port = int(sys.argv[1])
+
+
+    listen = ("0.0.0.0", port)
     server = HTTPServer(listen, MyHandler)
 
-    print("Listening...")
+    print("Server Listening on...", "{}:{}".format(*listen))
     server.serve_forever()
 
 main()

@@ -1,12 +1,15 @@
 **Name of Resource:** car
 
-**ATTRIBUTES:**
+**CAR ATTRIBUTES:**
 * owner_name
 * year
 * make
 * model
 * color
 * platenumber
+
+
+**USER ATTRIBUTES:**
 * fname
 * lname
 * email
