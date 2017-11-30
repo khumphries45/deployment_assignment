@@ -1,4 +1,5 @@
 import sqlite3
+from passlib.hash import bcrypt
 
 def dict_factory(cursor, row):
     d = {}
@@ -42,3 +43,20 @@ class CarsDB:
         self.cursor.execute("DELETE FROM cars WHERE id=?", (id,))
         self.connection.commit()
         return
+
+    def createUser(self, fname, lname, email, password):
+        encrypted_password = bcrypt.encrypt(password)
+        self.cursor.execute(" INSERT INTO users (fname,lname,email,encrypted_password) VALUES (?, ?, ?, ?)", (fname,lname,email,encrypted_password))
+        self.connection.commit()
+
+
+    def getUserbyEmail(self, email):
+        self.cursor.execute("SELECT * FROM users WHERE email=?", (email,))
+        row = self.cursor.fetchone()
+        return row
+
+
+    def getUserbyID(self, id):
+        self.cursor.execute("SELECT * FROM users where id=?", (id,))
+        row = self.cursor.fetchone()
+        return row

@@ -11,30 +11,46 @@
         <img id="header_image" src="racing.png" alt="classic">
         <h1>Car Show Registration</h1>
       </header>
-        <div class="row">
-            <div class="column">
-                <div class="registerform">
-                    <h2>Please Fill out to Register</h2>
-                    Name of Owner: <input type="text" id="owner_name">
-                    Year of Vehicle: <input type="text" id="year">
-                    Make of Vehicle: <input type="text" id="make">
-                    Model of Vehicle: <input type="text" id="model">
-                    Color of Vehicle: <input type="text" id="color">
-                    License Plate of Vehicle: <input type="text" id="platenumber">
-                    <button id="button" name="button" >Register</button>
-                </div>
+      <div id="welcomeContainer">
+      </div>
+          <div class="loginform">
+              <h2>Please Login</h2>
+              Email: <input type="text" id="loginemail">
+              Password: <input type="password" id="loginpassword">
+              <button id="loginbutton" name="button">Login</button>
+              <button id="signupbutton" name="button" >Create Account</button>
+          </div>
+          <div class="column">
+            <div class="createaccountform">
+                <h2>Please Fill out to Create Account</h2>
+                First Name: <input type="text" id="firstname">
+                Last Name: <input type="text" id="lastname">
+                Email: <input type="text" id="email">
+                Password: <input type="password" id="password">
+                <button id="createaccountbutton" name="button" >Create Account</button>
             </div>
+            <div class="registerform">
+                <h2>Please Fill out to Register</h2>
+                Name of Owner: <input type="text" id="owner_name">
+                Year of Vehicle: <input type="text" id="year">
+                Make of Vehicle: <input type="text" id="make">
+                Model of Vehicle: <input type="text" id="model">
+                Color of Vehicle: <input type="text" id="color">
+                License Plate of Vehicle: <input type="text" id="platenumber">
+                <button id="registerbutton" name="button" >Register</button>
+            </div>
+        </div>
             <div class="column">
-                 <div class="updateform">
-                    <h2>Update Registration</h2>
-                    Name of Owner: <input type="text" id="updateowner_name">
-                    Year of Vehicle: <input type="text" id="updateyear">
-                    Make of Vehicle: <input type="text" id="updatemake">
-                    Model of Vehicle: <input type="text" id="updatemodel">
-                    Color of Vehicle: <input type="text" id="updatecolor">
-                    License Plate of Vehicle: <input type="text" id="updateplatenumber">
-                    <button id="updatebutton" name="button" >Update</button>
-                    <button id="addbutton" name="button" >Add Registration</button>
+               <div class="updateform">
+                  <h2>Update Registration</h2>
+                  Name of Owner: <input type="text" id="updateowner_name">
+                  Year of Vehicle: <input type="text" id="updateyear">
+                  Make of Vehicle: <input type="text" id="updatemake">
+                  Model of Vehicle: <input type="text" id="updatemodel">
+                  Color of Vehicle: <input type="text" id="updatecolor">
+                  License Plate of Vehicle: <input type="text" id="updateplatenumber">
+                  <button id="updatebutton" name="button" >Update</button>
+                  <button id="addbutton" name="button" >Add Registration</button>
                 </div>
             </div>
             <div class="column">
@@ -43,6 +59,6 @@
                 </div>
             </div>
         </div>
+        <script src= "authentication.js"></script>
     </body>
-    <script src= "resourceful.js"></script>
 </html>
