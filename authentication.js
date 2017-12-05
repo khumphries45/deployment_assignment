@@ -36,7 +36,7 @@ loginbutton.onclick = function() {
   var passwordInput = document.querySelector("#loginpassword")
   var password = encodeURIComponent(passwordInput.value);
   var dataString = "email=" + email + "&password=" + password;
-  fetch("http://localhost:8080/sessions", {
+  fetch("https://awesome-carshow.herokuapp.com/sessions", {
     body: dataString,
     method: 'POST',
     credentials: 'include',
@@ -88,7 +88,7 @@ createaccountbutton.onclick = function() {
   var password = encodeURIComponent(passwordInput.value);
 
   var userdata = "fname=" + fname + "&lname=" + lname + "&email=" + email + "&password=" + password;
-  fetch('http://localhost:8080/users', {
+  fetch('https://awesome-carshow.herokuapp.com/users', {
     body: userdata,
     method: "POST",
     credentials: 'include',
@@ -123,7 +123,7 @@ createButton.onclick = function() {
     var platenumber = encodeURIComponent(platenumberInput.value);
 
     var data = "owner_name=" + owner_name + "&year=" + year + "&make=" + make + "&model=" + model + "&color=" + color + "&platenumber=" + platenumber;
-    fetch('http://localhost:8080/cars', {
+    fetch('https://awesome-carshow.herokuapp.com/cars', {
         body: data,
         method: 'POST',
         credentials: 'include',
@@ -138,7 +138,7 @@ createButton.onclick = function() {
 
 
 var deleteCar = function(id) {
-    fetch('http://localhost:8080/cars/'+id, {
+    fetch('https://awesome-carshow.herokuapp.com/cars/'+id, {
         credentials: 'include',
         method: 'DELETE'
     }).then(function (){
@@ -165,7 +165,7 @@ updateButton.onclick = function() {
     var platenumber = encodeURIComponent(platenumberInput.value);
 
     var data = "owner_name=" + owner_name + "&year=" + year + "&make=" + make + "&model=" + model + "&color=" + color + "&platenumber=" + platenumber;
-    fetch('http://localhost:8080/cars/'+ updateID, {
+    fetch('https://awesome-carshow.herokuapp.com/cars/'+ updateID, {
         body: data,
         credentials: 'include',
         method: 'PUT',
@@ -207,7 +207,7 @@ var showUpdate = function(car) {
 };
 
 var loadCars = function () {
-    fetch ('http://localhost:8080/cars', {
+    fetch ('https://awesome-carshow.herokuapp.com/cars', {
         credentials: 'include'
     }).then(function (response) {
         if (response.status == 401) {
